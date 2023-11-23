@@ -1,5 +1,8 @@
 # strapi-upload-supabase-provider
 
+Further changed so that it preserves the supabase-configured public url of images.
+That way this plugin can be used in a dockerized environment without garbage "supabase-kong:8000" image urls.
+
 <div>
   <img title="Supabase" alt="Supabase logo" src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/001/299/square_480/supabase-logo-icon_1.png" width="120px" height="120px" />
   <img title="Strapi" alt="Strapi logo" src="https://seeklogo.com/images/S/strapi-icon-logo-2E03188067-seeklogo.com.png" width="120px" height="120px" />
