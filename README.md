@@ -36,6 +36,7 @@ npm install strapi-upload-supabase-provider --save
 - `provider` defines the name of the provider, in this case we must put "strapi-upload-supabase-provider".
 - `providerOptions` is passed down during the construction of the provider. (ex: `new StorageClient(config)`).
 - `providerOptions.apiUrl` RESTful endpoint to manage your Supabase project.
+- `providerOptions.publicUrl` RESTful endpoint to publically access uploaded media.
 - `providerOptions.apiKey` API key of your Supabase project(service_role not anon).
 - `providerOptions.bucket` name of your Supabase bucket.
 - `providerOptions.directory` directory inside the bucket where you want to store your files.
@@ -55,6 +56,7 @@ module.exports = ({ env }) => ({
       provider: "strapi-upload-supabase-provider",
       providerOptions: {
         apiUrl: env("SUPABASE_API_URL"),
+        publicUrl: env("SUPABASE_PUBLIC_URL"),
         apiKey: env("SUPABASE_API_KEY"),
         bucket: env("SUPABASE_BUCKET_NAME"),
         directory: env("SUPABASE_BUCKET_DIRECTORY"),
@@ -91,7 +93,7 @@ module.exports = [
             "'self'",
             "data:",
             "blob:",
-            env("SUPABASE_API_URL"),
+            env("SUPABASE_PUBLIC_URL"),
           ],
         },
       },
