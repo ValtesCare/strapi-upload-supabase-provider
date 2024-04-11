@@ -40,6 +40,7 @@ npm install strapi-upload-supabase-provider --save
 - `providerOptions.apiKey` API key of your Supabase project(service_role not anon).
 - `providerOptions.bucket` name of your Supabase bucket.
 - `providerOptions.directory` directory inside the bucket where you want to store your files.
+- `providerOptions.cacheControl` cache control to set for files uploaded using strapi. Default of 3600 (one hour)
 - `sizeLimit` maximum size limit for your files on bytes.
 
 See the [documentation about using a provider](https://docs.strapi.io/developer-docs/latest/plugins/upload.html#using-a-provider) for information on installing and using a provider. To understand how environment variables are used in Strapi, please refer to the [documentation about environment variables](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/configurations/optional/environment.html#environment-variables).
